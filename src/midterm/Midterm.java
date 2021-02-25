@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package Midterm;
-
+import java.util.*;
 /**
  *
  * @author r2kar
@@ -46,13 +46,17 @@ public class Midterm {
                 break;
      }
     }
+    
     public static void main(String[] args) {
-        // TODO code application logic here
-        // try to get the input (myStr) from the user
-        String myStr= "SUMMER";
+        Scanner sc= new Scanner(System.in);
+        System.out.print("Enter Season:");
+        String myStr= sc.nextLine();
+        
+        
         Midterm test1= new Midterm(Seasons.valueOf(myStr));
         test1.seasonDescription();
         //test1.isSeason();
+        
         int ord = Seasons.valueOf(myStr).ordinal();
         System.out.println(Seasons.valueOf(myStr).ordinal());
         //a for loop that iterated thru the Seasons Enum using values() method
